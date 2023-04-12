@@ -11,7 +11,7 @@ do
     esac
 done
 
-# Default Variables
+# Default Variables (If parameters are not defined)
 # ---
 if [ $inputDir ]
 then
@@ -28,12 +28,12 @@ then
     sampleFile="*.*"
 fi
 
-# Docker Variables
+# Docker Config
 # ---
 pwizImg="proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses"
 msConvert="docker run -it --rm -v $inputDir:/inputDir -v $outputDir:/outputDir $pwizImg wine msconvert /inputDir/$sampleFile -o /outputDir"
 
-# Script
+# Script Execution
 # ---
 # Check if input directory is defined
 if [ $inputDir ]
@@ -50,10 +50,10 @@ then
         fi
         echo "Output directory: $outputDir"
 
-        # Execute Docker
-        echo "Initiating data file conversion"
+        # Execute ProteoWizard - msConvert Docker
+        echo "Initiating data file(s) conversion"
         $msConvert
-        echo "Data file conversion complete"
+        echo "Data file(s) conversion complete"
     else
         echo "Input directory: $inputDir does not exist"
         echo "Please ensure path to input directory is valid"
