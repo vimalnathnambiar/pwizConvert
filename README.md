@@ -53,6 +53,22 @@ sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 # Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
 ```
 
+via JavaScript
+
+```bash
+node ./src/js/pwizConvert.js -i /path/to/input/data/directory/
+# Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to a default output directory path on your machine.
+
+node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -o /path/to/output/data/directory/
+# Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
+
+node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s testData.d
+# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
+
+node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
+# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
+```
+
 <!-- ## Installation
 
 `$ npm i pwizConvert`
