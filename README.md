@@ -37,6 +37,12 @@ Navigate to the repository on your machine
 cd pwizConvert
 ```
 
+Install NPM dependencies
+
+```bash
+npm install
+```
+
 via Bash
 
 ```bash
