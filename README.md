@@ -9,21 +9,21 @@ To convert proprietary formatted MS data files into .mzML open file format using
 
 ## Supported Formats
 
-### Input
+**Input**
 
 D (Bruker)
 
-### Output
+**Output**
 
 mzML
 
 ## Pre-requisites
 
-### Docker
+**Docker**
 
 Docker is an easy-to-install application for your Mac, Linux, or Windows environment that enables you to build and share containerized applications and microservices. [Install](https://docs.docker.com/engine/install/)
 
-### Node JS
+**Node JS**
 
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. [Install](https://nodejs.org/en/download)
 
