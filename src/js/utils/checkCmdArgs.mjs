@@ -1,6 +1,12 @@
+/**
+ * Package Modules
+ */
 import os from 'os';
 import path from 'path';
 
+/**
+ * Function Modules
+ */
 // Set default values to CMD Argument Parameters if not defined
 export async function checkCmdArgs(inputDir, outputDir, sampleFile) {
   let batchName = path.basename(inputDir);
