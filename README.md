@@ -37,8 +37,6 @@ Navigate to the repository on your machine
 cd pwizConvert
 ```
 
-**Execution Examples:**
-
 via Bash Script
 
 ```bash
