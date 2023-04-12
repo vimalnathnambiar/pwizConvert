@@ -5,7 +5,17 @@
 [![Test coverage][codecov-image]][codecov-url]
 [![npm download][download-image]][download-url] -->
 
-To convert proprietary formatted MS data files into .mzML open file format using ProteoWizard&#39;s msconvert docker image.
+To convert proprietary formatted MS data files into .mzML open file format using msConvert by ProteoWizard (Docker).
+
+## Supported Formats
+
+### Input
+
+D (Bruker)
+
+### Output
+
+mzML
 
 ## Pre-requisites
 
@@ -30,8 +40,6 @@ cd pwizConvert
 Bash Script
 
 ```bash
-# Examples
-
 sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/
 # Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to a default output directory path on your machine.
 
