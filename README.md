@@ -25,6 +25,7 @@ There are two different versions of the script provided in the repository: [Bash
 - [Script Execution](#script-execution)
   - [Bash](#bash)
   - [JavaScript](#javascript)
+- [Flowchart](#flowchart)
 - [License](#license)
 
 ## Supported Formats
