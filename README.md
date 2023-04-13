@@ -13,6 +13,17 @@ Raw data are generated in different formats by analytical instruments (i.e., LC-
 
 There are two different versions of the script provided in the repository: [Bash](./src/bash/pwizConvert.sh) and [JavaScript](./src/js/pwizConvert.mjs). Both scripts use ProteoWizard's msConvert (Docker) to perform the file conversion.
 
+## Table of Contents
+
+- [Supported Formats](#supported-formats)
+  - [Input](#input)
+  - [Output](#output)
+- [Pre-requisites](#pre-requisites)
+  - [Docker](#docker)
+  - [Node JS](#node-js)
+- [Usage](#usage)
+- [License](#license)
+
 ## Supported Formats
 
 ### Input
