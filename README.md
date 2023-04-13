@@ -11,7 +11,7 @@ The purpose:
 
 Raw data are generated in different formats by analytical instruments (i.e., LC-QTOF-MS, MRMS) depending on the manufacturer of the instrument (i.e., Bruker, Sciex). Special/proprietary software is often required to read these data.
 
-There are two different versions of the script provided in the repository: [Bash](./src/bash/pwizConvert.sh) and [JavaScript](./src/js/pwizConvert.mjs). Both scripts use ProteoWizard's msConvert (Docker) to perform the file conversion.
+There are two different versions of the script provided in the repository: [Bash](./src/bash/pwizConvert.sh) and [JavaScript](./src/js/pwizConvert.mjs).
 
 ## Table of Contents
 
