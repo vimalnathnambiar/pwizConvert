@@ -26,6 +26,10 @@ There are two different versions of the script provided in the repository: [Bash
   - [Bash](#bash)
   - [JavaScript](#javascript)
 - [General Flowchart](#general-flowchart)
+- [Limitations](#limitations)
+  - [General](#general)
+  - [Bash](#bash-1)
+  - [JavaScript](#javascript-1)
 - [License](#license)
 
 ## Supported Formats
