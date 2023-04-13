@@ -69,7 +69,7 @@ sudo systemctl enable containerd.service
 
 - For Windows/Mac OS
 
-  - Open the Docker Client application on the machine. This will automatically start the Docker Daemon in the background.
+  - Open the Docker Client application on the machine. This should automatically start the Docker Daemon in the background.
 
 Script Execution
 
