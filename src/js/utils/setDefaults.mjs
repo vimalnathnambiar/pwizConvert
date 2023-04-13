@@ -8,7 +8,7 @@ import path from 'path';
  * Function Modules
  */
 // Set default values to CMD Argument Parameters if not defined
-export async function checkCmdArgs(inputDir, outputDir, sampleFile) {
+export async function setDefaults(inputDir, outputDir, sampleFile) {
   let batchName = path.basename(inputDir);
 
   // Check if output directory is defined by user

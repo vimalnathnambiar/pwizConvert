@@ -38,6 +38,20 @@ msConvert="docker run -it --rm -v $inputDir:/inputDir -v $outputDir:/outputDir $
 # Check if input directory is defined
 if [ $inputDir ]
 then
+
+    # Set default values if necessary
+    batchName=$(basename $inputDir)
+
+    if [ ! $outputDir ]
+    then
+        outputDir="$HOME/Data/mzML/$batchName/"
+    fi
+
+    if [ ! $sampleFile ]
+    then
+        sampleFile="*.*"
+    fi
+
     # Check for input directory
     if [ -d $inputDir ]
     then

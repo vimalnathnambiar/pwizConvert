@@ -119,6 +119,10 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s testData.d
 node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
 ```
 
+## Flowchart
+
+![pwizConvert-flowchart](./img/pwizConvert-flow.png)
+
 ## License
 
 [MIT](./LICENSE)
