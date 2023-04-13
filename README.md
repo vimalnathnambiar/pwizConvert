@@ -22,6 +22,9 @@ There are two different versions of the script provided in the repository: [Bash
   - [Docker](#docker)
   - [Node JS](#node-js)
 - [Usage](#usage)
+- [Script Execution](#script-execution)
+  - [Bash](#bash)
+  - [JavaScript](#javascript)
 - [License](#license)
 
 ## Supported Formats
@@ -82,9 +85,9 @@ sudo systemctl enable containerd.service
 
   - Open the Docker Client application on the machine. This should automatically start the Docker Daemon in the background.
 
-Script Execution
+## Script Execution
 
-- via Bash
+### Bash
 
 ```bash
 # Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the default output directory path on your machine.
@@ -100,7 +103,7 @@ sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s testData.d
 sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
 ```
 
-- via JavaScript
+### JavaScript
 
 ```bash
 # Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the default output directory path on your machine.
