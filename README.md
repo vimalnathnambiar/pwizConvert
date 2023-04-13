@@ -25,7 +25,7 @@ There are two different versions of the script provided in the repository: [Bash
 - [Script Execution](#script-execution)
   - [Bash](#bash)
   - [JavaScript](#javascript)
-- [Flowchart](#flowchart)
+- [General Flowchart](#general-flowchart)
 - [License](#license)
 
 ## Supported Formats
@@ -120,15 +120,23 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s testData.d
 node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
 ```
 
-## Flowchart
+## General Flowchart
+
+![pwizConvert-flowchart](./img/pwizConvert-flowchart.png)
+
+## Limitations
+
+### General
+
+- Information of the data file(s) that has an error is not captured.
 
 ### Bash
 
-![pwizConvert-Bash-flowchart](./img/pwizConvert-Bash-flowchart.png)
+-
 
 ### JavaScript
 
-![pwizConvert-JS-flowchart](./img/pwizConvert-JS-flowchart.png)
+- An error will interrupt the ProteoWizard conversion process.
 
 ## License
 
