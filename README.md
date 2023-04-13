@@ -122,7 +122,13 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 
 ## Flowchart
 
-![pwizConvert-flowchart](./img/pwizConvert-flow.png)
+### Bash
+
+![pwizConvert-Bash-flowchart](./img/pwizConvert-Bash-flowchart.png)
+
+### JavaScript
+
+![pwizConvert-JS-flowchart](./img/pwizConvert-JS-flowchart.png)
 
 ## License
 
