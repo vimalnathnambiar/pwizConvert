@@ -11,27 +11,27 @@ The purpose:
 
 Raw data are generated in different formats by analytical instruments (i.e., LC-QTOF-MS, MRMS) depending on the manufacturer of the instrument (i.e., Bruker, Sciex). Special/proprietary software is often required to read these data.
 
-There are two different version of the script provided in the repository: [Bash](./src/bash/pwizConvert.sh) and [JavaScript](./src/js/pwizConvert.mjs). Both the scripts uses the ProteoWizard's msConvert (Docker) to perform the file conversion.
+There are two different versions of the script provided in the repository: [Bash](./src/bash/pwizConvert.sh) and [JavaScript](./src/js/pwizConvert.mjs). Both scripts use ProteoWizard's msConvert (Docker) to perform the file conversion.
 
 ## Supported Formats
 
-**Input**
+### Input
 
-D (Bruker)
+- D (Bruker)
 
-**Output**
+### Output
 
-mzML
+- mzML
 
 ## Pre-requisites
 
-**Docker**
+### Docker
 
-Docker is an easy-to-install application for your Mac, Linux, or Windows environment that enables you to build and share containerized applications and microservices. [Install](https://docs.docker.com/engine/install/)
+- Docker is an easy-to-install application for your Mac, Linux, or Windows environment that enables you to build and share containerized applications and microservices. [Install](https://docs.docker.com/engine/install/)
 
-**Node JS** _(If executing the JavaScript version)_
+### Node JS
 
-Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. [Install](https://nodejs.org/en/download)
+- Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. [Install](https://nodejs.org/en/download)
 
 ## Usage
 
@@ -43,10 +43,10 @@ Navigate to the repository on your machine
 cd pwizConvert
 ```
 
-Install NPM dependencies _(If executing the JavaScript version)_
+Install NPM dependencies _(Require Node JS installed)_
 
 ```bash
-# Automatically install all dependencies listed in the package.json file.
+# Automatically install all dependencies listed in the package.json file for JavaScript execution.
 npm install
 ```
 
