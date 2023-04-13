@@ -132,15 +132,15 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 
 ### General
 
-- Information on the data file(s) that has an error is not captured.
+- Information of file(s) that has an error during conversion (i.e., ReaderFail) is not captured.
 
 ### Bash
 
--
+- An error during file conversion will not interrupt the entire file conversion process.
 
 ### JavaScript
 
-- An error will interrupt the ProteoWizard msConvert file conversion process.
+- An error during file conversion will interrupt the entire file conversion process.
 
 ## License
 
