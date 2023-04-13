@@ -5,18 +5,13 @@
 [![Test coverage][codecov-image]][codecov-url]
 [![npm download][download-image]][download-url] -->
 
-Raw data are generated in different formats by analytical instruments (i.e., LC-QTOF-MS, MRMS) depending on the manufacturer of the instrument (i.e., Bruker, Sciex). Special/proprietary software is often required to read these data.
-
-The purpose of this repository:
+The purpose:
 
 - To convert proprietary formatted MS data files into .mzML open file format using msConvert by ProteoWizard (Docker).
 
-There are two different version of the script provided in the repository:
+Raw data are generated in different formats by analytical instruments (i.e., LC-QTOF-MS, MRMS) depending on the manufacturer of the instrument (i.e., Bruker, Sciex). Special/proprietary software is often required to read these data.
 
-- [Bash](./src/bash/pwizConvert.sh)
-- [JavaScript](./src/js/pwizConvert.mjs)
-
-Both the scripts makes use of the ProteoWizard's msConvert (Docker) to perform the file conversion.
+There are two different version of the script provided in the repository: [Bash](./src/bash/pwizConvert.sh) and [JavaScript](./src/js/pwizConvert.mjs). Both the scripts uses the ProteoWizard's msConvert (Docker) to perform the file conversion.
 
 ## Supported Formats
 
