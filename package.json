@@ -1,7 +1,7 @@
 {
   "name": "pwizConvert",
   "version": "0.0.0",
-  "description": "To convert proprietary formatted MS data files into .mzML open file format using msConvert by ProteoWizard (Docker).",
+  "description": "To convert proprietary formatted MS data files into .mzML open file format using msConvert by ProteoWizard (Docker)",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
