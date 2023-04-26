@@ -133,15 +133,6 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 
 [Apache-2.0](./LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/pwizConvert.svg
-[npm-url]: https://www.npmjs.com/package/pwizConvert
-[ci-image]: https://github.com/vimalnathnambiar/pwizConvert/workflows/Node.js%20CI/badge.svg?branch=main
-[ci-url]: https://github.com/vimalnathnambiar/pwizConvert/actions?query=workflow%3A%22Node.js+CI%22
-[codecov-image]: https://img.shields.io/codecov/c/github/vimalnathnambiar/pwizConvert.svg
-[codecov-url]: https://codecov.io/gh/vimalnathnambiar/pwizConvert
-[download-image]: https://img.shields.io/npm/dm/pwizConvert.svg
-[download-url]: https://www.npmjs.com/package/pwizConvert
-
 <!-- ## Installation
 
 `$ npm i pwizConvert`
@@ -156,3 +147,12 @@ const result = library(args);
 ```
 
 ## [API Documentation](https://vimalnathnambiar.github.io/pwizConvert/) -->
+
+<!-- [npm-image]: https://img.shields.io/npm/v/pwizConvert.svg
+[npm-url]: https://www.npmjs.com/package/pwizConvert
+[ci-image]: https://github.com/vimalnathnambiar/pwizConvert/workflows/Node.js%20CI/badge.svg?branch=main
+[ci-url]: https://github.com/vimalnathnambiar/pwizConvert/actions?query=workflow%3A%22Node.js+CI%22
+[codecov-image]: https://img.shields.io/codecov/c/github/vimalnathnambiar/pwizConvert.svg
+[codecov-url]: https://codecov.io/gh/vimalnathnambiar/pwizConvert
+[download-image]: https://img.shields.io/npm/dm/pwizConvert.svg
+[download-url]: https://www.npmjs.com/package/pwizConvert -->
