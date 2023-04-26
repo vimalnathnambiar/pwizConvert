@@ -131,7 +131,7 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 
 ## License
 
-[MIT](./LICENSE)
+[Apache-2.0](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/pwizConvert.svg
 [npm-url]: https://www.npmjs.com/package/pwizConvert
