@@ -130,7 +130,7 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 
 ## Limitations
 
-- Information of file(s) that has an error during conversion (i.e., ReaderFail) is not captured.
+- Information of file(s) that has an error occur during conversion (i.e., ReaderFail) is not captured.
 
 ## License
 
