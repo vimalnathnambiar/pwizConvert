@@ -16,7 +16,7 @@ export async function execDocker(param) {
 
     // Execute Docker command and retrieve output
     let output = cmd.execSync(`${msConvert}`);
-    console.log(output.toString());
+    console.log(`${output.toString()}`);
   } catch (err) {
     console.log(`${err}`);
   }
