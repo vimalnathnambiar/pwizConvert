@@ -24,11 +24,8 @@ if (cmdArgs.i !== true && cmdArgs.i !== undefined) {
   // Check for input and output directories
   let dirCheck = await checkDir(param);
   if (dirCheck === true) {
-    console.log('\nConversion parameters\n---');
-    console.log(`Input directory: ${param.inputDir}`);
-    console.log(`Sample file: ${param.sampleFile}`);
-    console.log(`Output directory: ${param.outputDir}`);
-    console.log('---');
+    console.log('\nConversion parameters');
+    console.log(param);
 
     // Execute Docker
     console.log('\nInitiating data file(s) conversion');
