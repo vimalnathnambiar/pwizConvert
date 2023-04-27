@@ -22,7 +22,7 @@ export async function checkPath(param) {
   }
 
   if (param.sampleFile !== undefined) {
-    let filePath = `${param.inputDir}/${param.sampleFile}`;
+    let filePath = `${param.inputDir}${param.sampleFile}`;
 
     // If file path does not exist
     if (!fs.existsSync(filePath)) {
