@@ -11,7 +11,7 @@ do
     esac
 done
 
-# Set default values (If parameters are not defined)
+# Check and set default values for input parameters
 # ---
 echo -e "\nChecking and setting parameters for conversion"
 if [[ $inputDir ]]
@@ -61,6 +61,7 @@ then
             sampleFile="*.*"
         fi
 
+        # Display conversion parameters
         echo -e "\nConversion parameters"
         echo "---"
         echo "Input directory: $inputDir"
@@ -72,7 +73,7 @@ then
         pwizImg="proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses"
         msConvert="docker run -it --rm -v $inputDir:/inputDir -v $outputDir:/outputDir $pwizImg wine msconvert /inputDir/$sampleFile -o /outputDir"
 
-        # Execute Docker command
+        # Execute Docker
         echo  -e "\nInitiating data file(s) conversion\n"
         $msConvert
         echo "Data file(s) conversion complete"
