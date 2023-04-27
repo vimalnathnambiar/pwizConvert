@@ -18,6 +18,7 @@ There are two different versions of the script provided in the repository to aid
 - [Supported Formats](#supported-formats)
   - [Input](#input)
   - [Output](#output)
+- [Platform Compattibility](#platform-compatibility)
 - [Pre-requisites](#pre-requisites)
   - [Docker](#docker)
   - [Node JS](#node-js)
