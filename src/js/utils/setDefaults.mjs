@@ -17,8 +17,8 @@ export async function setDefaults(inputDir, outputDir, sampleFile) {
   }
 
   // Check input parameter: -s (sampleFile)
-  if (!(sampleFile !== true && sampleFile !== undefined)) {
-    sampleFile = '*.*';
+  if (sampleFile === true) {
+    sampleFile = undefined;
   }
 
   return { inputDir, outputDir, sampleFile };

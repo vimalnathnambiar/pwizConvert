@@ -18,6 +18,8 @@ export async function execDocker(param) {
     let output = cmd.execSync(`${msConvert}`);
     console.log(`${output.toString()}`);
   } catch (err) {
-    console.log(`${err}`);
+    console.log(
+      `Error: File(s) may have experienced error (i.e., ReaderFailure) during file conversion`,
+    );
   }
 }
