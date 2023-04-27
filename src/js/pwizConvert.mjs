@@ -35,7 +35,7 @@ if (cmdArgs.i !== true && cmdArgs.i !== undefined) {
   } else {
     console.log(`\nInput directory: ${param.inputDir} does not exist`);
     console.log(
-      'Please ensure input directory is defined correctly, and try again',
+      'Please ensure input directory is defined correctly. Try again',
     );
   }
 } else {
