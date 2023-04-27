@@ -6,13 +6,14 @@ import fs from 'fs';
 /**
  * Function Modules
  */
+// Check for input and output directories
 export async function checkDir(param) {
-  // Check for input directory
+  // If inputDir does not exist
   if (!fs.existsSync(param.inputDir)) {
     return false;
   }
 
-  // Check for output directory
+  // If outputDir does not exist
   if (!fs.existsSync(param.outputDir)) {
     fs.mkdirSync(param.outputDir, { recursive: true });
   }

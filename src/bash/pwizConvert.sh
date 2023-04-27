@@ -1,6 +1,6 @@
 # ! /bin/bash
 
-# Command-Line Argument Parameters
+# Retrieve command-Line arguments (input parameters) with flags defined: -i (inputDir), -o (outputDir) and -s (sampleFile)
 # ---
 while getopts i:s:o: flag
 do
@@ -11,7 +11,7 @@ do
     esac
 done
 
-# Set Defaults (If parameters are not defined)
+# Set default values (If parameters are not defined)
 # ---
 if [ $inputDir ]
 then
@@ -28,7 +28,7 @@ then
     sampleFile="*.*"
 fi
 
-# Docker Config
+# Set Docker image and command
 # ---
 pwizImg="proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses"
 msConvert="docker run -it --rm -v $inputDir:/inputDir -v $outputDir:/outputDir $pwizImg wine msconvert /inputDir/$sampleFile -o /outputDir"
@@ -50,7 +50,7 @@ then
         fi
         echo "Output directory: $outputDir"
 
-        # Execute ProteoWizard - msConvert Docker
+        # Execute Docker command
         echo "Initiating data file(s) conversion"
         $msConvert
         echo "Data file(s) conversion complete"

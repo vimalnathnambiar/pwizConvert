@@ -39,6 +39,10 @@ There are two different versions of the script provided in the repository to aid
 
 - mzML
 
+## Platform Compatibility
+
+Linux
+
 ## Pre-requisites
 
 ### Docker
@@ -128,6 +132,7 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 ## Limitations
 
 - Information of file(s) that has an error occur during conversion (i.e., ReaderFail) is not captured.
+- Program remain untested on Windows- and Mac OS-based systems
 
 ## License
 

@@ -12,27 +12,30 @@ import { setDefaults } from './utils/setDefaults.mjs';
 /**
  * Script Execution
  */
-// Retrieve command line arguments
+// Retrieve command line arguments (input parameters) with flags defined: -i (inputDir), -o (outputDir), and -s (sampleFile)
 let cmdArgs = minimist(process.argv.slice(2));
 
-// Check if -i (inputDir) flag is defined by the user
+// If input parameter: -i (inputDir) is called and defined by the user
 if (cmdArgs.i !== true && cmdArgs.i !== undefined) {
-  // Set default variables for -o (outputDir) and -s (sampleFile) if not defined by user
+  // Set default values (If parameters are not defined)
+  console.log('\nChecking and defining parameters for conversion');
   let param = await setDefaults(cmdArgs.i, cmdArgs.o, cmdArgs.s);
 
   // Check for input and output directories
   let dirCheck = await checkDir(param);
   if (dirCheck === true) {
+    console.log('\nConversion parameters:\n---');
     console.log(`Input directory: ${param.inputDir}`);
+    console.log(`Sample file: ${param.sampleFile}`);
     console.log(`Output directory: ${param.outputDir}`);
 
-    // Execute ProteoWizard - msConvert Docker
-    console.log('Initiating data file(s) conversion');
+    // Execute Docker
+    console.log('\nInitiating data file(s) conversion');
     await execDocker(param);
     console.log('Data file(s) conversion complete');
   } else {
     console.log(`Input directory: ${param.inputDir} does not exist`);
   }
 } else {
-  console.log('Please define the Input Directory using the following flag: -i');
+  console.log('Please define the input directory using the following flag: -i');
 }

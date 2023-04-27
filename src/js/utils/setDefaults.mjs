@@ -7,16 +7,17 @@ import path from 'path';
 /**
  * Function Modules
  */
-// Set default values to CMD Argument Parameters if not defined
+// Set default values (If parameters are not defined)
 export async function setDefaults(inputDir, outputDir, sampleFile) {
+  // Extract folder name from inputDir
   let batchName = path.basename(inputDir);
 
-  // Check if output directory is defined by user
+  // If output directory is undefined
   if (!(outputDir !== true && outputDir !== undefined)) {
-    outputDir = path.join(os.homedir(), '/Data/mzML/', batchName, '/');
+    outputDir = path.join(os.homedir(), `/Data/mzML/${batchName}/`);
   }
 
-  // Check if sample file is defined by user
+  // If sample file is undefined
   if (!(sampleFile !== true && sampleFile !== undefined)) {
     sampleFile = '*.*';
   }
