@@ -22,7 +22,7 @@ There are two different versions of the script provided in the repository to aid
 - [Pre-requisites](#pre-requisites)
   - [Docker](#docker)
   - [Node JS](#node-js)
-- [Usage](#usage)
+- [Installation](#installation)
 - [Script Execution](#script-execution)
   - [Bash](#bash)
   - [JavaScript](#javascript)
@@ -54,7 +54,7 @@ Linux
 
 - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. [Install](https://nodejs.org/en/download)
 
-## Usage
+## Installation
 
 Clone the GitHub repository to a desired path on your machine.
 
