@@ -18,15 +18,16 @@ let cmdArgs = minimist(process.argv.slice(2));
 // Check input parameter: -i (inputDir)
 if (cmdArgs.i !== true && cmdArgs.i !== undefined) {
   // Check and set default values for input parameters
-  console.log('\nChecking parameters for conversion');
+  console.log('\nChecking and setting parameters for conversion');
   let param = await setDefaults(cmdArgs.i, cmdArgs.o, cmdArgs.s);
 
+  console.log('\nConversion parameters');
+  console.log(param);
+
   // Check for input and output directories
+  console.log('\nChecking for input and output directories');
   let dirCheck = await checkDir(param);
   if (dirCheck === true) {
-    console.log('\nConversion parameters');
-    console.log(param);
-
     // Execute Docker
     console.log('\nInitiating data file(s) conversion');
     await execDocker(param);
