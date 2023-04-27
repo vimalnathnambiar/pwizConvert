@@ -21,11 +21,10 @@ export async function checkPath(param) {
     fs.mkdirSync(param.outputDir, { recursive: true });
   }
 
+  // If sample file is defined
   if (param.sampleFile !== undefined) {
-    let filePath = `${param.inputDir}${param.sampleFile}`;
-
     // If file path does not exist
-    if (!fs.existsSync(filePath)) {
+    if (!fs.existsSync(`${param.inputDir}${param.sampleFile}`)) {
       sampleFile = false;
     }
   }
