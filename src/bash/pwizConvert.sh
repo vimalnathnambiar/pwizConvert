@@ -13,51 +13,79 @@ done
 
 # Set default values (If parameters are not defined)
 # ---
-if [ $inputDir ]
+echo -e "\nChecking and setting parameters for conversion"
+if [[ $inputDir ]]
 then
     batchName=$(basename $inputDir)
 fi
 
-if [ ! $outputDir ]
+if [[ ! $outputDir ]]
 then
     outputDir="$HOME/Data/mzML/$batchName/"
 fi
 
-if [ ! $sampleFile ]
-then
-    sampleFile="*.*"
+# Check path to input and output directories (and sample file if defined)
+# ---
+echo -e "\nChecking path to input and output directories (and sample file if defined)"
+ inputDirStat=true
+ sampleFileStat=true
+
+ if [[ ! -d $inputDir ]]
+ then
+    inputDirStat=false
+ fi
+
+ if [[ ! -d $outputDir ]]
+ then
+    mkdir -p $outputDir
+ fi
+
+ if [[ $sampleFile ]]
+ then
+    sampleFilePath="$inputDir$sampleFile"
+
+    if [[ ! -d $sampleFilePath ]]
+    then
+        sampleFileStat=false
+    fi
 fi
 
-# Set Docker image and command
+# Docker execution
 # ---
-pwizImg="proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses"
-msConvert="docker run -it --rm -v $inputDir:/inputDir -v $outputDir:/outputDir $pwizImg wine msconvert /inputDir/$sampleFile -o /outputDir"
-
-# Script Execution
-# ---
-# Check if input directory is defined
-if [ $inputDir ]
+if [[ $inputDir ]]
 then
-    # Check for input directory
-    if [ -d $inputDir ]
+    if [[ "$inputDirStat" = true && "$sampleFileStat" = true ]]
     then
-        echo "Input directory: $inputDir"
-
-        # Check for output directory
-        if [ ! -d $outputDir ]
+        if [[ ! $sampleFile ]]
         then
-            mkdir -p $outputDir
+            sampleFile="*.*"
         fi
+
+        echo -e "\nConversion parameters"
+        echo "---"
+        echo "Input directory: $inputDir"
         echo "Output directory: $outputDir"
+        echo "Sample file: $sampleFile"
+
+        # Set Docker image and command
+        # ---
+        pwizImg="proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses"
+        msConvert="docker run -it --rm -v $inputDir:/inputDir -v $outputDir:/outputDir $pwizImg wine msconvert /inputDir/$sampleFile -o /outputDir"
 
         # Execute Docker command
-        echo "Initiating data file(s) conversion"
+        echo  -e "\nInitiating data file(s) conversion\n"
         $msConvert
         echo "Data file(s) conversion complete"
-    else
+
+    elif [[ "$inputDirStat" = false ]]
+    then
         echo "Input directory: $inputDir does not exist"
-        echo "Please ensure path to input directory is valid"
-    fi
+        echo "Please try again. Ensure input directory is defined correctly"
+    elif [[ "$sampleFileStat" = false ]]
+    then
+        echo "Sample file: $sampleFile does not exist"
+        echo "Please try again. Ensure sample file is defined correctly and is placed within the input directory"
+    fi      
 else
-    echo "Please define the Input Directory using the following flag: -i"
+    echo "Please try again. Ensure the input directory is defined using the following flag: -i"
 fi
