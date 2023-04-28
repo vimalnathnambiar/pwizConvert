@@ -16,6 +16,7 @@ export async function checkPath(param) {
     inputDir = false;
   }
 
+  // If input directory exist
   if (inputDir !== false) {
     // If outputDir does not exist
     if (!fs.existsSync(param.outputDir)) {
