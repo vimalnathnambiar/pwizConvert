@@ -16,9 +16,11 @@ export async function checkPath(param) {
     inputDir = false;
   }
 
-  // If outputDir does not exist
-  if (!fs.existsSync(param.outputDir)) {
-    fs.mkdirSync(param.outputDir, { recursive: true });
+  if (inputDir !== false) {
+    // If outputDir does not exist
+    if (!fs.existsSync(param.outputDir)) {
+      fs.mkdirSync(param.outputDir, { recursive: true });
+    }
   }
 
   // If sample file is defined
