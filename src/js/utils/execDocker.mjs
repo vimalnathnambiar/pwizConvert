@@ -5,7 +5,7 @@
 import * as cmd from 'child_process';
 
 /**
- * Function Modules
+ * Function Module
  */
 // Execute Docker
 export async function execDocker(param) {

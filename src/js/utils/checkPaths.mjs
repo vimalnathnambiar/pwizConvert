@@ -4,7 +4,7 @@
 import fs from 'fs';
 
 /**
- * Function Modules
+ * Function Module
  */
 // Check path to input and output directories (and sample file if defined)
 export async function checkPath(param) {
