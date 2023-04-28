@@ -35,9 +35,12 @@ echo -e "\nChecking path to input and output directories (and sample file if def
     inputDirStat=false
  fi
 
- if [[ ! -d $outputDir ]]
+ if [[ "$inputDirStat" = true ]]
  then
-    mkdir -p $outputDir
+     if [[ ! -d $outputDir ]]
+    then
+        mkdir -p $outputDir
+    fi
  fi
 
  if [[ $sampleFile ]]
