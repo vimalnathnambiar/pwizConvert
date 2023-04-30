@@ -26,7 +26,7 @@ There are two different versions of the script provided in the repository to aid
 - [Script Execution](#script-execution)
   - [Bash](#bash)
   - [JavaScript](#javascript)
-- [General Flowchart](#general-flowchart)
+- [Flowchart](#flowchart)
 - [Limitations](#limitations)
 - [License](#license)
 
@@ -126,7 +126,7 @@ node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext
 node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
 ```
 
-## General Flowchart
+## Flowchart
 
 ![pwizConvert-flowchart](./img/pwizConvert-flowchart.png)
 
