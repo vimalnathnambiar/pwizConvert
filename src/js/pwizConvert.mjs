@@ -5,7 +5,7 @@
  */
 import minimist from 'minimist';
 
-import { checkPath } from './utils/checkPaths.mjs';
+import { checkPaths } from './utils/checkPaths.mjs';
 import { execDocker } from './utils/execDocker.mjs';
 import { setDefaults } from './utils/setDefaults.mjs';
 
@@ -25,8 +25,8 @@ if (cmdArgs.i !== true && cmdArgs.i !== undefined) {
   console.log(
     '\nChecking path to input and output directories (and sample file if defined)',
   );
-  let pathCheck = await checkPath(param);
-  if (pathCheck.inputDir === true && pathCheck.sampleFile === true) {
+  let pathCheck = await checkPaths(param);
+  if (pathCheck.inputDirStat === true && pathCheck.sampleFileStat === true) {
     if (param.sampleFile === undefined) {
       param.sampleFile = '*.*';
     }
@@ -38,12 +38,12 @@ if (cmdArgs.i !== true && cmdArgs.i !== undefined) {
     console.log('\nInitiating data file(s) conversion');
     await execDocker(param);
     console.log('Data file(s) conversion complete');
-  } else if (pathCheck.inputDir === false) {
+  } else if (pathCheck.inputDirStat === false) {
     console.log(`\nInput directory: ${param.inputDir} does not exist`);
     console.log(
       'Please try again. Ensure input directory is defined correctly',
     );
-  } else if (pathCheck.sampleFile === false) {
+  } else if (pathCheck.sampleFileStat === false) {
     console.log(`\nSample file: ${param.sampleFile} does not exist`);
     console.log(
       'Please try again. Ensure sample file is defined correctly and is placed within the input directory',

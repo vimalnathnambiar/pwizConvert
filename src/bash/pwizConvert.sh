@@ -11,52 +11,50 @@ do
     esac
 done
 
-# Check and set default values for input parameters
+# Script Execution
 # ---
-echo -e "\nChecking and setting parameters for conversion"
 if [[ $inputDir ]]
 then
+
+    # Check and set default values for input parameters
+    # ---
+    echo -e "\nChecking and setting parameters for conversion"
     batchName=$(basename $inputDir)
-fi
 
-if [[ ! $outputDir ]]
-then
-    outputDir="$HOME/Data/mzML/$batchName/"
-fi
-
-# Check path to input and output directories (and sample file if defined)
-# ---
-echo -e "\nChecking path to input and output directories (and sample file if defined)"
- inputDirStat=true
- sampleFileStat=true
-
- if [[ ! -d $inputDir ]]
- then
-    inputDirStat=false
- fi
-
- if [[ "$inputDirStat" = true ]]
- then
-     if [[ ! -d $outputDir ]]
+    if [[ ! $outputDir ]]
     then
-        mkdir -p $outputDir
-    fi
- fi
+        outputDir="$HOME/Data/mzML/$batchName/"
+    fi  
 
- if [[ $sampleFile ]]
- then
-    sampleFilePath="$inputDir$sampleFile"
+    # Check path to input and output directories (and sample file if defined)
+    # ---
+    echo -e "\nChecking path to input and output directories (and sample file if defined)"
+    inputDirStat=true
+    sampleFileStat=true
 
-    if [[ ! -d $sampleFilePath ]]
+    if [[ ! -d $inputDir ]]
     then
-        sampleFileStat=false
+        inputDirStat=false
     fi
-fi
 
-# Docker execution
-# ---
-if [[ $inputDir ]]
-then
+    if [[ "$inputDirStat" = true ]]
+    then
+        if [[ ! -d $outputDir ]]
+        then
+            mkdir -p $outputDir
+        fi
+    fi
+
+    if [[ $sampleFile ]]
+    then
+        sampleFilePath="$inputDir$sampleFile"
+
+        if [[ ! -d $sampleFilePath ]]
+        then
+            sampleFileStat=false
+        fi
+    fi
+
     if [[ "$inputDirStat" = true && "$sampleFileStat" = true ]]
     then
         if [[ ! $sampleFile ]]

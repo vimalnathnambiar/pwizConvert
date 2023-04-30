@@ -7,17 +7,17 @@ import fs from 'fs';
  * Function Module
  */
 // Check path to input and output directories (and sample file if defined)
-export async function checkPath(param) {
-  let inputDir = true;
-  let sampleFile = true;
+export async function checkPaths(param) {
+  let inputDirStat = true;
+  let sampleFileStat = true;
 
   // If inputDir does not exist
   if (!fs.existsSync(param.inputDir)) {
-    inputDir = false;
+    inputDirStat = false;
   }
 
   // If input directory exist
-  if (inputDir !== false) {
+  if (inputDirStat !== false) {
     // If outputDir does not exist
     if (!fs.existsSync(param.outputDir)) {
       fs.mkdirSync(param.outputDir, { recursive: true });
@@ -28,8 +28,8 @@ export async function checkPath(param) {
   if (param.sampleFile !== undefined) {
     // If file path does not exist
     if (!fs.existsSync(`${param.inputDir}${param.sampleFile}`)) {
-      sampleFile = false;
+      sampleFileStat = false;
     }
   }
-  return { inputDir, sampleFile };
+  return { inputDirStat, sampleFileStat };
 }
