@@ -117,13 +117,13 @@ sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -
 node ./src/js/pwizConvert.js -i /path/to/input/data/directory/
 
 # Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
-node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -o /path/to/output/data/directory/
+node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -o /path/to/output/data/directory/
 
 # Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the default output directory path.
-node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext
+node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -s fileName.ext
 
 # Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
-node ./src/js/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
+node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
 ```
 
 ## Flowchart
