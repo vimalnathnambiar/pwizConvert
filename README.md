@@ -97,32 +97,32 @@ sudo systemctl enable containerd.service
 ### Bash
 
 ```bash
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the default output directory path on your machine.
+# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the default output directory path on your machine.
 sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/
 
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
+# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the user specified output directory path.
 sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -o /path/to/output/data/directory/
 
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the default output directory path.
+# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the default output directory path.
 sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext
 
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
+# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the user specified output directory path.
 sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
 ```
 
 ### JavaScript
 
 ```bash
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the default output directory path on your machine.
+# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the default output directory path on your machine.
 node ./src/js/pwizConvert.js -i /path/to/input/data/directory/
 
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
+# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the user specified output directory path.
 node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -o /path/to/output/data/directory/
 
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the default output directory path.
+# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the default output directory path.
 node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -s fileName.ext
 
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted filed to the user specified output directory path.
+# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the user specified output directory path.
 node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
 ```
 
