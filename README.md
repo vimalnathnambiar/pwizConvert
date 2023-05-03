@@ -24,8 +24,8 @@ There are two different versions of the script provided in the repository to aid
   - [Node JS](#node-js)
 - [Installation](#installation)
 - [Script Execution](#script-execution)
-  - [Bash](#bash)
-  - [JavaScript](#javascript)
+  - [Additional Features](#additional-features)
+  - [Default Values](#default-values)
 - [Flowchart](#flowchart)
 - [Limitations](#limitations)
 - [License](#license)
@@ -94,36 +94,38 @@ sudo systemctl enable containerd.service
 
 ## Script Execution
 
-### Bash
+Open terminal
+
+Execute command
 
 ```bash
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the default output directory path on your machine.
+# Convert all data files from the user specified input data directory path to mzML format and output the converted files to the default output directory path on your machine.
+
+# Bash script
 sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/
 
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the user specified output directory path.
-sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -o /path/to/output/data/directory/
-
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the default output directory path.
-sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext
-
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the user specified output directory path.
-sh ./src/bash/pwizConvert.sh -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
+# JavaScript
+node ./src/js/pwizConvert.js -i /path/to/input/data/directory/
 ```
 
-### JavaScript
+### Additional Features
 
 ```bash
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the default output directory path on your machine.
-node ./src/js/pwizConvert.js -i /path/to/input/data/directory/
+# Add the following input parameters to the script execution command:
 
-# Convert all data files from the user specified input data directory path to .mzML format and output the converted files to the user specified output directory path.
-node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -o /path/to/output/data/directory/
+# To convert a specific raw data file to mzML
+-s fileName.d
 
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the default output directory path.
-node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -s fileName.ext
+# To define a specific output directory
+-o /path/to/output/data/directory/
+```
 
-# Convert a specific data file from the user specified input data directory path to .mzML format and output the converted file to the user specified output directory path.
-node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -s fileName.ext -o /path/to/output/data/directory/
+### Default Values
+
+```bash
+# Values used if input parameters are defined incorrectly or not defined
+o (output directory) = /home/$USER/Data/mzML/$batchName/
+s (sample file) = *.*
 ```
 
 ## Flowchart
@@ -133,7 +135,7 @@ node ./src/js/pwizConvert.js -i /path/to/input/data/directory/ -s fileName.ext -
 ## Limitations
 
 - Information of file(s) that has an error occur during conversion (i.e., ReaderFail) is not captured.
-- Program remain untested on Windows- and Mac OS-based systems
+- Program remains untested on Windows- and Mac OS-based systems
 
 ## License
 
