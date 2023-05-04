@@ -42,7 +42,7 @@ There are two different versions of the script provided in the repository to aid
 
 ## Platform Compatibility
 
-Linux
+- Linux
 
 ## Pre-requisites
 
