@@ -130,7 +130,7 @@ s (sample file) = *.*
 
 ## Flowchart
 
-![pwizConvert-flowchart](./img/pwizConvert-flowchart.png)
+![pwizConvert-flowchart](./flowchart/pwizConvert.png)
 
 ## Limitations
 
