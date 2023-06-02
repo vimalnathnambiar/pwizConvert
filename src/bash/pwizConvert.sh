@@ -75,7 +75,7 @@ then
         msConvert="docker run -it --rm -v $inputDir:/inputDir -v $outputDir:/outputDir $pwizImg wine msconvert /inputDir/$sampleFile -o /outputDir"
 
         # Execute Docker
-        echo  -e "\nInitiating data file(s) conversion\n"
+        echo -e "\nInitiating data file(s) conversion\n"
         $msConvert
         echo "Data file(s) conversion complete"
 
